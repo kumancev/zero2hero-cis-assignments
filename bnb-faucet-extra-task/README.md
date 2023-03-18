@@ -1,4 +1,4 @@
-# tBNB Bootcamp Faucet 
+# tBNB Bootcamp Faucet 🚰
 Site: https://tbnb-faucet.vercel.app
 
 ## How to Start App
