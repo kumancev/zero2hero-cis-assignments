@@ -5,8 +5,9 @@
 - Develop a "rock-paper-scissors" smart contract
 - In this smart contract, it should be possible to play for an amount starting from 0.0001 tBNB
 - The player can win or lose at random. If the player wins, he can get a reward of up to x2
-EXTRA: Smart contract must use blockchain Oracles to determine winner
-EXTRA: Added multiplayer functionality
+
+__EXTRA__: Smart contract must use blockchain Oracles to determine winner
+__EXTRA__: Added multiplayer functionality
 
 ## Run app
 ```shell

@@ -6,7 +6,7 @@
 - Create a smart contract for airdrop (sending tokens to multiple addresses) 
 - Make an airdrop of your tokens to at least 2 addresses 
 
-EXTRA: Use Merkle Tree to optimize your airdrop (you can make an airdrop via claim) 
+__EXTRA__: Use Merkle Tree to optimize your airdrop (you can make an airdrop via claim) 
 
 ## Run app
 ```shell

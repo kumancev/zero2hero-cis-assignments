@@ -5,8 +5,9 @@
 - Develop a "document signature" smart contract
 - Add 2 or more addresses to the "white list" 
 - Whitelist addresses can sign 
-EXTRA: A unique token (ERC721) is issued when signing a document 
-EXTRA: Use Merkle Tree to optimize whitelisting
+
+__EXTRA__: A unique token (ERC721) is issued when signing a document 
+__EXTRA__: Use Merkle Tree to optimize whitelisting
 
 ## Run app
 ```shell
