@@ -1,36 +1,41 @@
 import React, { useEffect, useState } from 'react'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
-import getWhitelistStatus from '../services/getWhitelistStatus'
+import { getIsWhitelist, getIsClaimed } from '../services/getWhitelistStatus'
 import { useAccount } from 'wagmi'
 
 export default function HomePage() {
   const { address } = useAccount()
-  
-  const [status, setStatus] = useState<boolean | null>(null)
+
+  const [isWhitelist, setIsWhitelist] = useState<boolean | null>(null)
+  const [isClaimed, setIsClaimed] = useState<boolean | null>(null)
 
   useEffect(() => {
     const getStatus = async (address: `0x${string}`) => {
-      const bool = await getWhitelistStatus(address)
+      const isWhitelistStatus = await getIsWhitelist(address)
+      const isClaimedStatus = await getIsClaimed(address)
 
-      return bool
+      return { isWhitelistStatus, isClaimedStatus }
     }
-    
+
     if (address) {
-      getStatus(address).then((bool) => {
-        setStatus(bool as any)
+      getStatus(address).then(({ isWhitelistStatus, isClaimedStatus }) => {
+        setIsWhitelist(isWhitelistStatus as any)
+        setIsClaimed(isClaimedStatus as any)
       })
     }
-
   }, [address])
+
+  const textIsWhiteList = isWhitelist ? (
+    <p>Great! You're in whitelist. Now you can claim token</p>
+  ) : (
+    <p>You're not in whitelist</p>
+  )
 
   return (
     <div>
       <ConnectButton />
-      <p>Address: {address}</p>
-      {status 
-        ? <p>Great! You're in whitelist. Now you can claim token</p> 
-        : <p>You're not in whitelist</p>
-      }
+
+      {isClaimed ? <p>You're already claimed</p> : textIsWhiteList}
     </div>
   )
 }
