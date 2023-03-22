@@ -1,3 +1,3 @@
-const merkleProof = ["0xafe7c546eb582218cf94b848c36f3b058e2518876240ae6100c4ef23d38f3e07","0x55ccdfef4fa396946ab54b6051ce9e639c2a0c2fbd4063f9a16536344e979774"] as const
+const merkleProof = ["0xfed7a6802c77b85ecf8c752f134404a0b4d6bb6f1bac5c2542f41f707bf6a3fa","0xfe42d595133061479acdbea8df507d644e2bc878fd576eca6ba49458a328e6a4"] as const
 
 export default merkleProof

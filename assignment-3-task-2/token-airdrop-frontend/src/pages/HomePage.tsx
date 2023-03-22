@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { getIsWhitelist, getIsClaimed } from '../services/getWhitelistStatus'
+import { getClaimToken } from '../services/getClaimToken'
 import { useAccount } from 'wagmi'
 
 export default function HomePage() {
@@ -25,8 +26,19 @@ export default function HomePage() {
     }
   }, [address])
 
+  async function handleClaim() {
+    try {
+      await getClaimToken()
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
   const textIsWhiteList = isWhitelist ? (
-    <p>Great! You're in whitelist. Now you can claim token</p>
+    <>
+      <p>Great! You're in whitelist. Now you can claim token</p>
+      <button onClick={handleClaim}>Claim</button>
+    </>
   ) : (
     <p>You're not in whitelist</p>
   )
