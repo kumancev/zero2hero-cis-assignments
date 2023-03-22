@@ -16,7 +16,7 @@ __EXTRA__: Add Digital Identity functionality, to prevent sibyl attack _(added l
 ```shell
 npm install
 
-cat .env
+cat > .env
 # add this to your .env file
 PRIVATE_KEY="PASTE_YOUR"
 BSCSCAN_API_KEY="PASTE_YOUR"
