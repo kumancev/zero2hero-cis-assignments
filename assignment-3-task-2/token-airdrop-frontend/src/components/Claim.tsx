@@ -38,7 +38,7 @@ export default function Claim() {
   }
 
   return (
-    <section className="md:flex md:justify-between md:items-center  gap-16 md:h-full">
+    <section className="md:flex md:justify-between mb-36 gap-16 md:items-center mob:mb-8">
       {/* IMAGE SECTION */}
       <div className="basis-3/5 z-10 mt-8 md:mt-8 flex justify-center md:order-2">
         <img

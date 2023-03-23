@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'mob': { 'raw': '(min-height: 350px)' },
+        'mob': { 'raw': '(max-width: 400px)' },
       },
     },
   },
