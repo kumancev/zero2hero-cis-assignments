@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Loader() {
   return (
-    <div className="text-center">
+    <div className="text-center mt-6">
       <div role="status">
         <svg
           aria-hidden="true"

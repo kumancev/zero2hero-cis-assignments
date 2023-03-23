@@ -17,7 +17,7 @@ const { chains, provider } = configureChains(
 )
 
 const { connectors } = getDefaultWallets({
-  appName: 'Rock Finger Scissors',
+  appName: 'Airdrop DDL Token',
   chains,
 })
 

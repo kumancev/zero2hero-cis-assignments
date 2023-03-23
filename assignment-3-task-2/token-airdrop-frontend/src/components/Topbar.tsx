@@ -3,7 +3,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 export default function Topbar() {
   return (
-    <nav className="bg-gray-900 border-gray-900 px-2 sm:px-4 py-2.5 rounded mb-4">
+    <nav className="bg-gray-900 border-gray-900 px-2 sm:px-4 py-2.5 rounded">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         <a href="https://flowbite.com/" className="flex items-center">
           <img
@@ -50,10 +50,10 @@ export default function Topbar() {
             </li>
             <li>
               <a
-                href="#"
+                href="https://testnet.bscscan.com/address/0x9EB73260367222D4F0704cb25789E766944AbFC9"
                 className="block py-2 pl-3 pr-4 text-gray-300 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-500 md:p-0 "
               >
-                Contact
+                Contract
               </a>
             </li>
           </ul>

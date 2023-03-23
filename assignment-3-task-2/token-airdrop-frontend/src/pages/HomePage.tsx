@@ -1,16 +1,14 @@
 import React from 'react'
-import { useAccount } from 'wagmi'
 import Claim from '../components/Claim'
-import BeforeConnect from '../components/BeforeConnect'
+import Footer from '../components/Footer'
 import Topbar from '../components/Topbar'
 
 export default function HomePage() {
-  const { address } = useAccount()
-
   return (
-    <>
+    <div className="bg-gray-900 min-h-screen">
       <Topbar />
-      {address ? <Claim /> : <BeforeConnect />}
-    </>
+      <Claim />
+      <Footer />
+    </div>
   )
 }
