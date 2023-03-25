@@ -1,6 +1,6 @@
 .game{
     display: flex;
-    margin-top: 50px;
+    margin-top: 5em;
     flex-wrap: nowrap;
     align-items: center;
 
@@ -67,9 +67,10 @@
             padding: 10px 20px;
             border-radius: 5px;
             font-size: .8rem;
+            color: #005bd1;
 
             &:hover{
-                color: red;
+                color: rgb(0, 47, 109);
             }
         }
     }

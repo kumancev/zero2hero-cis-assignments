@@ -11,10 +11,10 @@ const Footer = () => {
     <>
       <footer className="footer">
         <div class="attribution">
-          Coded by{' '}
-          <a href="" target="_blank">
-            Alex Kumancev
-          </a>
+          <p>Coded by{' '}
+          <a href="" target="_blank" data-replace="See my github">
+            <span>Alex Kumancev</span> 
+          </a></p> 
         </div>
         <button className="rules" onClick={toggle}>
           Rules

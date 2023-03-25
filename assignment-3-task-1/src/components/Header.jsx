@@ -1,7 +1,12 @@
 import React from 'react'
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 const Header = ({ score }) => {
   return (
+    <>
+    <div className="connect-btn">
+      <ConnectButton />
+    </div>
     <div className="header">
       <div className="text">
         <span>Rock</span>
@@ -10,9 +15,15 @@ const Header = ({ score }) => {
       </div>
       <div className="score-box">
         <span>Score</span>
-        <div className="score-box__score">{score}</div>
+        <div className="score-box__score">
+          W: {score} 
+        </div>
+        <div className="score-box__score">
+          L: {score}
+        </div>
       </div>
     </div>
+    </>
   )
 }
 
