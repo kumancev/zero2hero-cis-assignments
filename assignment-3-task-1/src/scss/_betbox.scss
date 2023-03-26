@@ -1,0 +1,44 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  margin-top: 1em;
+
+  .text {
+    display: flex;
+    align-items: center;
+    padding-right: 0.75rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: rgb(255, 255, 255);
+  }
+
+  .input {
+    width: 12rem;
+    border-radius: 0.75rem;
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+    // background-color: transparent;
+
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+  }
+  .input:focus {
+    outline: 2px solid white;
+  }
+  
+  .btn {
+    border-radius: 0.75rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-top: .5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    background-color: #0077ff;
+  }
+
+  .btn:hover {
+    background-color: #0063d4;
+    cursor: pointer;
+  }
+}
