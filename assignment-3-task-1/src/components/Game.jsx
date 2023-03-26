@@ -127,45 +127,7 @@ export default function Play() {
             }`}
           ></div>
         )}
-        {/* ) : (
-           <div className="counter"></div>
-         )} */}
       </div>
     </div>
-    // <main>
-    //   <section className="">
-    //     <div className="">
-    //       <div className="">
-    //         {status != null && (
-    //           <h2>
-    //             {status == 3 && 'Waiting...'}
-    //             {status == 0 && 'U Won!'}
-    //             {status == 1 && 'U Lost!'}
-    //             {status == 2 && 'Tie!'}
-    //           </h2>
-    //         )}
-    //         {status != 3 && status != null && (
-    //           <span className="">{secondsLeft}</span>
-    //         )}
-    //       </div>
-    //       <div className="">
-    //         {/* <Lineup
-    //           hand1={getImageByChoice(playerChoice)}
-    //           showHand2={status != 3}
-    //           hover={false}
-    //           hand2={getImageByChoice(hostChoice)}
-    //         > */}
-    //           <div>
-    //             Hand 1: {playerChoice}
-    //           </div>
-    //           <span className="">VS</span>
-    //           <div>
-    //             Hand 2: {(status != 3) ? hostChoice : "waiting..."}
-    //           </div>
-    //         {/* </Lineup> */}
-    //       </div>
-    //     </div>
-    //   </section>
-    // </main>
   )
 }

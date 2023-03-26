@@ -17,10 +17,10 @@ export function getFromSessionStorage(key) {
 export const getTitleByChoice = (choice) => {
   switch (choice) {
     case 1:
-      return 'rock'
+      return 'paper'
     case 2:
       return 'scissors'
     case 3:
-      return 'paper'
+      return 'rock'
   }
 }
