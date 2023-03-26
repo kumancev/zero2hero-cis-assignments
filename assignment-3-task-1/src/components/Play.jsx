@@ -18,6 +18,7 @@ const Play = ({ setMyChoice }) => {
 
   const [selected, setSelected] = useState(null)
   const [showSelected, setShowSelected] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 
   const [cookies] = useCookies(['bet'])
 
@@ -57,7 +58,8 @@ const Play = ({ setMyChoice }) => {
       getStatus(address)
         .then(({ status }) => {
           if (status == 3) {
-            router.push('/ga,e')
+            router.push('/game')
+            setIsLoading(false)
           }
         })
         // eslint-disable-next-line no-console
@@ -69,39 +71,42 @@ const Play = ({ setMyChoice }) => {
 
   return (
     <div className="play">
-      <img src={Triangle} alt="" className="triangle" />
-      <div className="items">
-        {/* <Link to="/game"> */}
-          <div
-            data-id="paper"
-            onClick={() => {
-              select(1)
-              setChoice
-            }}
-            className="icon icon--paper"
-          ></div>
-        {/* </Link>
-        <Link to="/game"> */}
-          <div
-            data-id="scissors"
-            onClick={() => {
-              select(2)
-              setChoice
-            }}
-            className="icon icon--scissors"
-          ></div>
-        {/* </Link>
-        <Link to="/game"> */}
-          <div
-            data-id="rock"
-            onClick={() => {
-              select(3)
-              setChoice
-            }}
-            className="icon icon--rock"
-          ></div>
-        {/* </Link> */}
-      </div>
+      {isLoading ? (
+        <div>Waiting...</div>
+      ) : (
+        <>
+          <img src={Triangle} alt="" className="triangle" />
+          <div className="items">
+            <div
+              data-id="paper"
+              onClick={() => {
+                select(1)
+                setChoice
+                setIsLoading(true)
+              }}
+              className="icon icon--paper"
+            ></div>
+            <div
+              data-id="scissors"
+              onClick={() => {
+                select(2)
+                setChoice
+                setIsLoading(true)
+              }}
+              className="icon icon--scissors"
+            ></div>
+            <div
+              data-id="rock"
+              onClick={() => {
+                select(3)
+                setChoice
+                setIsLoading(true)
+              }}
+              className="icon icon--rock"
+            ></div>
+          </div>
+        </>
+      )}
     </div>
   )
 }

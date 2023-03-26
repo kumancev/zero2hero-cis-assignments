@@ -39,7 +39,6 @@ function App() {
             <Route
               path="/game"
               element={
-                // <Game myChoice={myChoice} score={score} setScore={setScore} />
                 <Game />
               }
             />
