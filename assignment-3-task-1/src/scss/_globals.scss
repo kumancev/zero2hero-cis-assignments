@@ -1,22 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
-*,*::before,*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-body{
-    font-family: 'Rubik Mono One', sans-serif;
-    color: #fff;
-    text-align: center;
-    box-sizing: border-box;
-    background:$background-gradient;
+body {
+  font-family: 'Rubik Mono One', sans-serif;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  background: $background-gradient;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connect-before {
+  margin-top: 18em;
 }

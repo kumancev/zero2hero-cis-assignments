@@ -4,22 +4,17 @@ $scissors-gradient: hsl(76, 79%, 50%);
 $paper-gradient: hsl(230, 89%, 62%);
 $rock-gradient: hsl(348, 90%, 59%);
 
-
 //text
 
 $dark-text: hsl(0, 0%, 11%);
 $score-text: hsl(0, 0%, 11%);
-$header-outline: hsla(217, 100%, 20%, 0.5);
+$header-outline: hsla(177, 100%, 67%, 0.788);
 
 //Background
-$background-gradient: radial-gradient(
-rgba(47, 128, 237, 1),
-rgba(178, 255, 218, 1)
-);
 
+$background-gradient: #000;
 //Images
 
-$imageP:"../src/images/icon-paper.svg";
-$imageS:"../src/images/icon-scissors.svg";
-$imageR:"../src/images/icon-rock.svg";
-
+$imageP: '../src/images/icon-paper.svg';
+$imageS: '../src/images/icon-scissors.svg';
+$imageR: '../src/images/icon-rock.svg';

@@ -26,19 +26,19 @@
   .input:focus {
     outline: 2px solid white;
   }
-  
+
   .btn {
     border-radius: 0.75rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
-    padding-top: .5rem;
+    padding-top: 0.5rem;
     font-size: 1.25rem;
     line-height: 1.75rem;
-    background-color: #0077ff;
+    background-color: hsla(177, 100%, 67%, 0.788);
   }
 
   .btn:hover {
-    background-color: #0063d4;
+    background-color: hsla(177, 83%, 42%, 0.788);
     cursor: pointer;
   }
 }
