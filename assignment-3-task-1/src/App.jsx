@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Header from './components/Header'
 import Play from './components/Play'
 import Game from './components/Game'
-import GameMain from './components/GameMain'
 import Footer from './components/Footer'
 import { Routes, Route } from 'react-router-dom'
 
@@ -41,7 +40,7 @@ function App() {
               path="/game"
               element={
                 // <Game myChoice={myChoice} score={score} setScore={setScore} />
-                <GameMain />
+                <Game />
               }
             />
           </Routes>
