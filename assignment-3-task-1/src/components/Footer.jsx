@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <>
       <footer className="footer">
-        <div class="attribution">
+        <div className="attribution">
           <p>
             Coded by{' '}
             <a href="https://github.com/kumancev" target="_blank" data-replace="See my github">

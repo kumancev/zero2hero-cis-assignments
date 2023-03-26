@@ -31,7 +31,7 @@ export default function BetBox() {
         }}
         className="btn"
       >
-        <img src={save} alt="save" srcset="" />
+        <img src={save} alt="save" />
       </button>
     </div>
   )

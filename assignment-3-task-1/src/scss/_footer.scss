@@ -22,7 +22,7 @@
         letter-spacing: 2px;
 
         &:hover{
-            background-color: rgba($color: #78ffe2, $alpha: .8);
+            background-color: rgba($color: hsl(230, 89%, 62%), $alpha: .8);
             color: $dark-text;
             cursor: pointer;
         }
@@ -45,7 +45,7 @@
         left: 0;
     }
       a::before {
-        background-color: #a1f4ff;
+        background-color: hsl(76, 79%, 50%);
         height: 2px;
         bottom: 0;
         transform-origin: 100% 50%;
@@ -59,7 +59,7 @@
         transform-origin: 100% 50%;
         transform: translate3d(200%, 0, 0);
         transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-        color: #a8ffec;
+        color: hsl(76, 79%, 50%);
       }
       
       a:hover::before {
