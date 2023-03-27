@@ -10,7 +10,7 @@ View Demo: https://rps-web3-game.vercel.app/
 ### ✅ What's done:
 - [x] Build a frontend for a rock-paper-scissors game 
 - [x] Users can select one figure and call play() in the smart contract
-- [ ] Users can see the history of the games
+- [x] Users can see the history of the games
 - [x] Upload the work to github
 - [x] Upload your frontend (for example in: fleek.co , reder.com , vercel)
  
