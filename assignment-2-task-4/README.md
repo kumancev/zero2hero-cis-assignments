@@ -1,18 +1,21 @@
 # Voting System 🗳️
+
 🤖 Smart-contract address: https://testnet.bscscan.com/address/0xea3b9fa1661f58815f6e1cc0b14dfdffb591c9de
 
-✅ __What's done__:
-- Create a contract for the voting system
-- Add a feature to create a new voting session, including a theme and options for voting.
-- Add a feature that allows voters to cast their vote for a specific option.
-- Add a feature to get the current vote count for each option.
-- Add a feature to retrieve a list of all voting sessions.
-- Add a function to retrieve the results of a particular voting session.
+### ✅ **What's done**:
 
-__EXTRA__: Add a feature that allows the creator of a voting session to set a minimum quorum for the results to be considered valid.
-__EXTRA__: Add Digital Identity functionality, to prevent sibyl attack _(added logic of DAO, you have to deposit funds before you vote + also can do fundraising)_
+- [x] Create a contract for the voting system
+- [x] Add a feature to create a new voting session, including a theme and options for voting.
+- [x] Add a feature that allows voters to cast their vote for a specific option.
+- [x] Add a feature to get the current vote count for each option.
+- [x] Add a feature to retrieve a list of all voting sessions.
+- [x] Add a function to retrieve the results of a particular voting session.
+
+- [x] **EXTRA**: Add a feature that allows the creator of a voting session to set a minimum quorum for the results to be considered valid.
+- [x] **EXTRA**: Add Digital Identity functionality, to prevent sibyl attack _(added logic of DAO, you have to deposit funds before you vote + also can do fundraising)_
 
 ## Run app
+
 ```shell
 npm install
 

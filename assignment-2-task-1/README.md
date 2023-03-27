@@ -1,13 +1,13 @@
 # Rock-Paper-Scissors 🪨🧻✂️
 🤖 Smart-contract address: https://testnet.bscscan.com/address/0xf01a1cd9b95426a3190d28717a789c7103fc9148
 
-✅ __What's done__:
-- Develop a "rock-paper-scissors" smart contract
-- In this smart contract, it should be possible to play for an amount starting from 0.0001 tBNB
-- The player can win or lose at random. If the player wins, he can get a reward of up to x2
+### ✅ __What's done__:
+- [x] Develop a "rock-paper-scissors" smart contract
+- [x] In this smart contract, it should be possible to play for an amount starting from 0.0001 tBNB
+- [x] The player can win or lose at random. If the player wins, he can get a reward of up to x2
 
-__EXTRA__: Smart contract must use blockchain Oracles to determine winner
-__EXTRA__: Added multiplayer functionality
+- [x] __EXTRA__: Smart contract must use blockchain Oracles to determine winner
+- [x] __EXTRA__: Added multiplayer functionality
 
 ## Run app
 ```shell

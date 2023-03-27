@@ -1,13 +1,13 @@
 # Document Signature ✍️
 🤖 Smart-contract address: https://testnet.bscscan.com/address/0x56Ca43552386408a48Fb7bB011a33cB3417385f2
 
-✅ __What's done__:
-- Develop a "document signature" smart contract
-- Add 2 or more addresses to the "white list" 
-- Whitelist addresses can sign 
+### ✅ __What's done__:
+- [x] Develop a "document signature" smart contract
+- [x] Add 2 or more addresses to the "white list" 
+- [x] Whitelist addresses can sign 
 
-__EXTRA__: A unique token (ERC721) is issued when signing a document 
-__EXTRA__: Use Merkle Tree to optimize whitelisting
+- [x] __EXTRA__: A unique token (ERC721) is issued when signing a document 
+- [x] __EXTRA__: Use Merkle Tree to optimize whitelisting
 
 ## Run app
 ```shell

@@ -1,12 +1,12 @@
 # Token Airdrop 🪂
 🤖 Smart-contract address: https://testnet.bscscan.com/address/0x2E0cb96756a2989734ec0d4B54c7091A86E4C8fB
 
-✅ __What's done__:
-- Create a standard ERC20 token 
-- Create a smart contract for airdrop (sending tokens to multiple addresses) 
-- Make an airdrop of your tokens to at least 2 addresses 
+### ✅ __What's done__:
+- [x] Create a standard ERC20 token 
+- [x] Create a smart contract for airdrop (sending tokens to multiple addresses) 
+- [x] Make an airdrop of your tokens to at least 2 addresses 
 
-__EXTRA__: Use Merkle Tree to optimize your airdrop (you can make an airdrop via claim) 
+- [x] __EXTRA__: Use Merkle Tree to optimize your airdrop (you can make an airdrop via claim) 
 
 ## Run app
 ```shell
