@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAccount } from 'wagmi'
 
@@ -6,6 +6,7 @@ import useChallengeWatch from '../hooks/useChallengeWatch'
 import useRouter from '../hooks/useRouter'
 import rfsGetCurrentChallengeStatus from '../services/rpsGetCurrentChallenge'
 import { getTitleByChoice } from '../lib/helper'
+import { useCookies } from 'react-cookie'
 
 export default function Play() {
   const router = useRouter()
@@ -28,9 +29,14 @@ export default function Play() {
     setStatus
   )
 
-  // useEffect(() => {
-  //   console.log(challengeId, status, playerChoice, hostChoice);
-  // }, [challengeId, playerChoice, hostChoice, status]);
+  const [cookies, setCookie] = useCookies(['wins', 'losses'])
+  const [wins, setWins] = useState(Number(cookies.wins || 0))
+  const [losses, setLosses] = useState(Number(cookies.losses || 0))
+
+  useEffect(() => {
+    setCookie('wins', wins)
+    setCookie('losses', losses)
+  }, [wins, losses, setCookie])
 
   useEffect(() => {
     const getStatus = async (address: `0x${string}`) => {
@@ -57,8 +63,8 @@ export default function Play() {
   }, [address, router])
 
   useEffect(() => {
-    let timer: string | number | NodeJS.Timeout | undefined;
-    let interval: string | number | NodeJS.Timeout | undefined;
+    let timer: string | number | NodeJS.Timeout | undefined
+    let interval: string | number | NodeJS.Timeout | undefined
 
     if (status !== 3) {
       timer = setTimeout(() => {
@@ -77,6 +83,15 @@ export default function Play() {
       clearInterval(interval)
     }
   }, [status, secondsLeft])
+
+  useEffect(() => {
+    if (status === 0) {
+      setWins(wins + 1)
+    }
+    if (status === 1) {
+      setLosses(losses + 1)
+    }
+  }, [status])
 
   return (
     <div className="game">

@@ -1,7 +1,7 @@
-import React from 'react'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import BetBox from './BetBox'
 import { useAccount } from 'wagmi'
+import { useCookies } from 'react-cookie'
 
 interface HeaderProps {
   score: number
@@ -9,6 +9,7 @@ interface HeaderProps {
 
 const Header = ({ score }: HeaderProps) => {
   const { address } = useAccount()
+  const [cookies, setCookie] = useCookies(['wins', 'losses'])
 
   return (
     <>
@@ -25,8 +26,8 @@ const Header = ({ score }: HeaderProps) => {
             </div>
             <div className="score-box">
               <span>Score</span>
-              <div className="score-box__score">W: {score}</div>
-              <div className="score-box__score">L: {score}</div>
+              <div className="score-box__score">W: {cookies.wins}</div>
+              <div className="score-box__score">L: {cookies.losses}</div>
             </div>
           </div>
           <BetBox />

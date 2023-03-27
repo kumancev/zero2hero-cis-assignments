@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useCookies } from 'react-cookie'
 import save from '../images/Save.svg'
 
