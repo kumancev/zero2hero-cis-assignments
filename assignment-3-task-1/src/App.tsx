@@ -29,7 +29,7 @@ function App() {
   const { address } = useAccount()
 
   const [myChoice, setMyChoice] = useState('')
-  const [score, setScore] = useState(0)
+  const [score, setScore] = useState<number>(0)
 
   return (
     <WagmiConfig client={wagmiClient}>

@@ -1,4 +1,4 @@
-export function getFromLocalStorage(key) {
+export function getFromLocalStorage(key: string): string | null {
   if (typeof window !== 'undefined') {
     return window.localStorage.getItem(key)
   }
@@ -6,7 +6,7 @@ export function getFromLocalStorage(key) {
   return null;
 }
 
-export function getFromSessionStorage(key) {
+export function getFromSessionStorage(key: string): string | null {
   if (typeof sessionStorage !== 'undefined') {
     return sessionStorage.getItem(key)
   }
@@ -14,7 +14,7 @@ export function getFromSessionStorage(key) {
   return null
 }
 
-export const getTitleByChoice = (choice) => {
+export function getTitleByChoice(choice: number | null): string | null {
   switch (choice) {
     case 1:
       return 'paper'
@@ -23,4 +23,6 @@ export const getTitleByChoice = (choice) => {
     case 3:
       return 'rock'
   }
+
+  return null
 }

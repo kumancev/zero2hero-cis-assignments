@@ -11,12 +11,12 @@ export default function Play() {
   const router = useRouter()
   const { address } = useAccount()
 
-  const [challengeId, setChallengeId] = useState(null)
-  const [playerChoice, setPlayerChoice] = useState(null)
-  const [hostChoice, setHostChoice] = useState(null)
-  const [status, setStatus] = useState(null)
-  const [myChoice, setMyChoice] = useState(null)
-  const [house, setHouse] = useState(null)
+  const [challengeId, setChallengeId] = useState<number | null>(null)
+  const [playerChoice, setPlayerChoice] = useState<number | null>(null)
+  const [hostChoice, setHostChoice] = useState<number | null>(null)
+  const [status, setStatus] = useState<number | null>(null)
+  const [myChoice, setMyChoice] = useState<string | null>(null)
+  const [house, setHouse] = useState<string | null>(null)
 
   const [secondsLeft, setSecondsLeft] = useState(5)
 
@@ -33,7 +33,7 @@ export default function Play() {
   // }, [challengeId, playerChoice, hostChoice, status]);
 
   useEffect(() => {
-    const getStatus = async (address) => {
+    const getStatus = async (address: `0x${string}`) => {
       const { status, challengeId, player, playerChoice, hostChoice } =
         await rfsGetCurrentChallengeStatus(address)
 
@@ -43,12 +43,12 @@ export default function Play() {
     if (address) {
       getStatus(address)
         .then(({ status, challengeId, playerChoice, hostChoice }) => {
-          setChallengeId(challengeId)
-          setPlayerChoice(playerChoice)
-          setHostChoice(hostChoice)
-          setStatus(status)
+          setChallengeId(challengeId as number)
+          setPlayerChoice(playerChoice as number)
+          setHostChoice(hostChoice as number)
+          setStatus(status as number)
 
-          setMyChoice(getTitleByChoice(playerChoice))
+          setMyChoice(getTitleByChoice(playerChoice as number))
         })
         .catch(() => router.push('/'))
     } else {
@@ -57,8 +57,8 @@ export default function Play() {
   }, [address, router])
 
   useEffect(() => {
-    let timer
-    let interval
+    let timer: string | number | NodeJS.Timeout | undefined;
+    let interval: string | number | NodeJS.Timeout | undefined;
 
     if (status !== 3) {
       timer = setTimeout(() => {

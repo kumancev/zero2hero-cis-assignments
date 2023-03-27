@@ -1,35 +1,30 @@
 {
-  "name": "web3-rock-paper-scissors",
-  "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "source": "src/index.html",
+  "name": "test-rps",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "clean": "rm dist/bundle.js",
-    "start": "parcel",
-    "build-prod": "parcel build"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^0.12.4",
+    "@types/react-router-dom": "^5.3.3",
     "ethers": "^5.7.2",
     "query-string": "^8.1.0",
     "react": "^18.2.0",
     "react-cookie": "^4.1.1",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.8.2",
+    "react-router-dom": "^6.9.0",
     "wagmi": "^0.12.6"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.0",
-    "@babel/preset-env": "^7.20.0",
-    "@babel/preset-react": "^7.18.6",
-    "@parcel/transformer-sass": "^2.8.3",
-    "buffer": "^5.7.1",
-    "parcel": "^2.8.3",
-    "prettier": "^2.8.4",
-    "process": "^0.11.10",
-    "sass": "^1.58.3"
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "sass": "^1.60.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0"
   }
 }

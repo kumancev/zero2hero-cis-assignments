@@ -8,8 +8,8 @@ import rfsGetCurrentChallengeStatus from '../services/rpsGetCurrentChallenge'
 import rfsPlay from '../services/rpsPlay'
 import useRouter from '../hooks/useRouter'
 
-const Play = ({ setMyChoice }) => {
-  const setChoice = (e) => {
+const Play = ({ setMyChoice }: any) => {
+  const setChoice = (e: { target: any }) => {
     setMyChoice(e.target.dataset.id)
   }
 
@@ -22,7 +22,7 @@ const Play = ({ setMyChoice }) => {
 
   const [cookies] = useCookies(['bet'])
 
-  const select = async (choice) => {
+  const select = async (choice: any) => {
     if (!address) {
       return false
     }
@@ -46,7 +46,7 @@ const Play = ({ setMyChoice }) => {
   }
 
   useEffect(() => {
-    const getStatus = async (address) => {
+    const getStatus = async (address: `0x${string}`) => {
       const { challengeId, status } = await rfsGetCurrentChallengeStatus(
         address
       )

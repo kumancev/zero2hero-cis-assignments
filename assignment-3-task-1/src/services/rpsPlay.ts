@@ -7,7 +7,7 @@ import { ethers } from 'ethers'
 
 import { contract } from '../lib/web3config'
 
-const rfsPlay = async (address, choice, bet) => {
+const rfsPlay = async (address: string, choice: number, bet: number) => {
   const config = await prepareWriteContract({
     address: contract.address,
     abi: contract.abi,

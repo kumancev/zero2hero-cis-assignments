@@ -14,8 +14,8 @@
     padding: 7px 25px;
     right: 1rem;
     border-radius: 0.4rem;
-    border: 3px solid #2c2c2c;
-    color: #2c2c2c;
+    border: 3px solid #636363;
+    color: #636363;
     // color: lighten($header-outline,20%);
     background: none;
     font-weight: 600;
@@ -23,13 +23,12 @@
 
     &:hover {
       background-color: rgba($color: hsl(76, 79%, 50%), $alpha: 0.8);
-      color: $dark-text;
       cursor: pointer;
     }
   }
 
   a {
-    color: #2c2c2c;
+    color: #636363;
     font-weight: 900;
     vertical-align: top;
     overflow: hidden;

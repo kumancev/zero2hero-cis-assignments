@@ -16,7 +16,6 @@ export default function useRouter() {
     return {
       // For convenience add push(), replace(), pathname at top level
       push: navigate,
-      replace: history.replace,
       pathname: location.pathname,
       // Merge params and parsed query string into single 'query' object
       // so that they can be used interchangeably.

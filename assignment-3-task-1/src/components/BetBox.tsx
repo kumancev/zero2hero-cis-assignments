@@ -6,7 +6,7 @@ export default function BetBox() {
   const [cookies, setCookie] = useCookies(['bet'])
   const [value, setValue] = useState(cookies.bet ?? 0.001)
 
-  const handleChange = (event) => {
+  const handleChange = (event: { target: { value: string } }) => {
     const inputValue = parseFloat(event.target.value)
     if (inputValue >= 0.001 && inputValue <= 0.1) {
       setValue(inputValue)

@@ -4,15 +4,13 @@ import { useState } from 'react'
 import { contract } from '../lib/web3config'
 
 export default function useChallengeWatch(
-  playerAddressInit,
-  setChallengeId,
-  setPlayerChoice,
-  setHostChoice,
-  setStatus,
+  playerAddressInit: `0x${string}` | undefined,
+  setChallengeId: React.Dispatch<React.SetStateAction<number | null>>,
+  setPlayerChoice: React.Dispatch<React.SetStateAction<number | null>>,
+  setHostChoice: React.Dispatch<React.SetStateAction<number | null>>,
+  setStatus: React.Dispatch<React.SetStateAction<number | null>>
 ) {
-  const [playerAddress] = useState(
-    playerAddressInit
-  );
+  const [playerAddress] = useState(playerAddressInit)
 
   // useContractEvent({
   //   address: contract.address,
@@ -37,11 +35,11 @@ export default function useChallengeWatch(
     },
     (challengeId, player, status, playerChoice, hostChoice) => {
       if (player == playerAddress) {
-        setChallengeId(challengeId)
-        setPlayerChoice(playerChoice)
-        setHostChoice(hostChoice)
-        setStatus(status)
+        setChallengeId(challengeId as number)
+        setPlayerChoice(playerChoice as number)
+        setHostChoice(hostChoice as number)
+        setStatus(status as number)
       }
     }
-  );
+  )
 }

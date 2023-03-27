@@ -3,7 +3,11 @@ import { ConnectButton } from '@rainbow-me/rainbowkit'
 import BetBox from './BetBox'
 import { useAccount } from 'wagmi'
 
-const Header = ({ score }) => {
+interface HeaderProps {
+  score: number
+}
+
+const Header = ({ score }: HeaderProps) => {
   const { address } = useAccount()
 
   return (
