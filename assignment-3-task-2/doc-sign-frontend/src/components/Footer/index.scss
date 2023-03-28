@@ -2,4 +2,12 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  a {
+    text-decoration: none;
+    color: aquamarine;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 }

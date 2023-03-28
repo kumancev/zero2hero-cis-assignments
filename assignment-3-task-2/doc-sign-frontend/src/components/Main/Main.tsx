@@ -25,6 +25,18 @@ function Main() {
       theme: 'dark',
     })
 
+  const notifyConnectWallet = () =>
+    toast.info('Connect your wallet to check the status', {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'dark',
+    })
+
   const notifySuccess = () =>
     toast(textStatus, {
       position: 'top-center',
@@ -37,9 +49,15 @@ function Main() {
       theme: 'dark',
     })
 
-  const [isLoading, setIsLoading] = useState(true)
-
   const styleContent = canSign ? 'space-around' : 'center'
+
+  const gegNotifyMessage = () => {
+    if (!address) {
+      return notifyConnectWallet()
+    }
+
+    return canSign ? notifySuccess() : notifyError()
+  }
 
   useEffect(() => {
     const getAddressStatus = async (address: `0x${string}`) => {
@@ -65,9 +83,12 @@ function Main() {
   }
 
   return (
-    <main style={{ justifyContent: styleContent}}>
+    <main style={{ justifyContent: styleContent }}>
       <div>
-        <button className="btn btn-white btn-animate" onClick={canSign ? notifySuccess : notifyError}>
+        <button
+          className="btn btn-white btn-animate"
+          onClick={gegNotifyMessage}
+        >
           Get status
         </button>
       </div>

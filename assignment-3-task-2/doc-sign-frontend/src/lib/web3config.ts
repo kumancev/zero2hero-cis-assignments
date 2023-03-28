@@ -33,9 +33,8 @@ interface Contract {
 }
 
 const contract: Contract = {
-  address: "0x56Ca43552386408a48Fb7bB011a33cB3417385f2",
+  address: '0x56Ca43552386408a48Fb7bB011a33cB3417385f2',
   abi: ABI,
 }
-
 
 export { chains, connectors, contract, provider, wagmiClient }
