@@ -30,19 +30,20 @@ async function getIsClaimed(address: `0x${string}`) {
   return bool
 }
 
-export async function getStatus(address: `0x${string}`): Promise<IStatus | undefined> {
+export async function getStatus(
+  address: `0x${string}`
+): Promise<IStatus | undefined> {
   const isWhitelistStatus = await getIsWhitelist(address)
   const isClaimedStatus = await getIsClaimed(address)
 
   if (!isClaimedStatus && isWhitelistStatus) {
-    return { text: "Great! You're in whitelist. Now you can claim token", status: true }
+    return {
+      text: "Great! You're in whitelist. Now you can claim token",
+      status: true,
+    }
   }
 
   if (!isWhitelistStatus) {
-    return { text: "You're not in whitelist", status: false }
-  }
-
-  if (isClaimedStatus) {
-    return { text: "You're already claimed", status: false}
+    return { text: 'You do not have access to sign document', status: false }
   }
 }

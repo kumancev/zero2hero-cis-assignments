@@ -4,7 +4,6 @@ import { WagmiConfig } from 'wagmi'
 import '@rainbow-me/rainbowkit/styles.css'
 import { chains, wagmiClient } from './lib/web3config'
 
-import './App.scss'
 import Home from './scenes/Home'
 
 function App() {
