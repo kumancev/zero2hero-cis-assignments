@@ -1,0 +1,17 @@
+{
+  "name": "assignment-4-task-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gen-meta.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "canvas-noise": "^1.0.0",
+    "dotenv": "^16.0.3"
+  }
+}
