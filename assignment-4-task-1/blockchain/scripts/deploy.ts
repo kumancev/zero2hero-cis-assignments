@@ -1,22 +1,44 @@
-import { ethers } from "hardhat";
+import { ethers, run } from "hardhat";
 
 async function main() {
-  const currentTimestampInSeconds = Math.round(Date.now() / 1000);
-  const ONE_YEAR_IN_SECS = 365 * 24 * 60 * 60;
-  const unlockTime = currentTimestampInSeconds + ONE_YEAR_IN_SECS;
+  const RewardToken = await ethers.getContractFactory("RewardToken");
+  const rewardToken = await RewardToken.deploy("Reward Token", "RWD");
+  const ShapeNFT = await ethers.getContractFactory("NFT");
+  const shapeNFT = await ShapeNFT.deploy();
 
-  const lockedAmount = ethers.utils.parseEther("1");
+  await rewardToken.deployed();
+  await shapeNFT.deployed();
 
-  const Lock = await ethers.getContractFactory("Lock");
-  const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
+  console.log(`RWD token deployed to ${rewardToken.address}`);
+  console.log(`Shape NFT's collection deployed to ${shapeNFT.address}`);
 
-  await lock.deployed();
+  const reward_token_address = rewardToken.address;
+  const nft_collection_address = shapeNFT.address;
 
-  console.log(`Lock with 1 ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`);
+  const NFTStaking = await ethers.getContractFactory("NFTStaking");
+  const nftStaking = await NFTStaking.deploy(reward_token_address, nft_collection_address);
+
+  console.log(`NFT Staking deployed to ${nftStaking.address}`);
+
+  await run('verify:verify', {
+    address: reward_token_address,
+    contract: 'contracts/RewardToken.sol:RewardToken',
+    constructorArguments: ["Reward Token", "RWD"]
+  })
+
+  await run('verify:verify', {
+    address: nft_collection_address,
+    contract: 'contracts/ShapeNFT.sol:NFT',
+    constructorArguments: []
+  })
+
+  await run('verify:verify', {
+    address: nftStaking.address,
+    contract: 'contracts/NFTStaking.sol:NFTStaking',
+    constructorArguments: [reward_token_address, nft_collection_address]
+  })
 }
 
-// We recommend this pattern to be able to use async/await everywhere
-// and properly handle errors.
 main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
