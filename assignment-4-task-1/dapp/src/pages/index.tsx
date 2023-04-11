@@ -61,7 +61,10 @@ const Home: NextPage = () => {
           content="Shape NFT website"
           name="This is amazing NFT Collections. You can mint and stake your NFT's!"
         />
-        <link href="/favicon.ico" rel="icon" />
+        <link
+          rel="icon"
+          href="https://img.icons8.com/color/48/null/octaedro.png"
+        />
       </Head>
 
       <main className={styles.main}>
@@ -80,14 +83,14 @@ const Home: NextPage = () => {
               </button>
               <p>Your number of nfts: {ownerBalance}</p>
 
-            <div className={styles['link-wrapper']}>
-              <Link href="/stakeNft">
-                <p className={styles.link}>Stake NFT&apos;s</p>
-              </Link>
-              <Link href="/myCollection">
-                <p className={styles.link}>See my collection</p>
-              </Link>
-            </div>
+              <div className={styles['link-wrapper']}>
+                <Link href="/stakeNft">
+                  <p className={styles.link}>Stake NFT&apos;s</p>
+                </Link>
+                <Link href="/myCollection">
+                  <p className={styles.link}>See my collection</p>
+                </Link>
+              </div>
 
               <Slider />
             </>
