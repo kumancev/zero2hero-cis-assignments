@@ -41,10 +41,15 @@
   width: 100%;
 }
 
-.card > a {
+.nft-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nft-links > a {
   color: #fff;
 }
-.card > a:hover {
+.nft-links > a:hover {
   color: #f0f0f0;
   text-decoration: underline;
 }

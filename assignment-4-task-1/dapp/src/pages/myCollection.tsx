@@ -4,8 +4,9 @@ import { useAppSelector } from '../app/hooks'
 import NftCard from '../components/NftCard'
 import Link from 'next/link'
 import styles from '../styles/MyCollection.module.css'
+import { NextPage } from 'next'
 
-const MyCollection = () => {
+const MyCollection: NextPage = () => {
   const [nftData, setNftData] = useState<any>([])
 
   const urls = useAppSelector((state) => state.urls.urls)

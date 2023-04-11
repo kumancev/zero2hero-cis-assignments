@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from '../styles/MyCollection.module.css'
 
 interface NftCardProps {
@@ -15,13 +16,17 @@ const NftCard = ({ name, description, image }: NftCardProps) => {
       <img src={`https://ipfs.io/ipfs/${image.substring(7)}`} alt={name} />
       <h2>{name}</h2>
       <p>{description}</p>
-      <a
-        href="https://testnets.opensea.io/collection/shape-nft-3"
-        target="_blank"
-        rel="noreferrer"
-      >
-        View collection
-      </a>
+
+      <div className={styles['nft-links']}>
+        <a
+          href="https://testnets.opensea.io/collection/shape-nft-3"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View collection
+        </a>
+        {/* <Link href="/stakeNft">Stake this NFT</Link> */}
+      </div>
     </div>
   )
 }

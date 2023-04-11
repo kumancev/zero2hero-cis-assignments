@@ -62,4 +62,21 @@ const urlsNFT = async (owner: `0x${string}`, balance: number) => {
   return urls
 }
 
-export { mintNFT, balanceNFT, urlsNFT }
+const approveNFT = async (operator: `0x${string}`) => {
+  const config = await prepareWriteContract({
+    address: nft_contract.address,
+    abi: nft_contract.abi,
+    functionName: 'setApprovalForAll',
+    args: [operator, true],
+  })
+
+  const { hash } = await writeContract(config)
+
+  const data = await waitForTransaction({
+    hash,
+  })
+
+  return data
+}
+
+export { mintNFT, balanceNFT, urlsNFT, approveNFT }

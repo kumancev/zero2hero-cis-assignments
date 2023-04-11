@@ -3,6 +3,7 @@ import { configureChains, createClient } from 'wagmi'
 import { bscTestnet } from 'wagmi/chains'
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
 
+import TOKEN_ABI from './abi/Token'
 import NFT_ABI from './abi/NFT'
 import STAKING_ABI from './abi/NFTStaking'
 
@@ -45,11 +46,17 @@ const nft_contract: Contract = {
   abi: NFT_ABI,
 }
 
+const token_contract: Contract = {
+  address: '0xee567f65f0c86406F9f92cEfFFBd7377f3Ca8e43',
+  abi: NFT_ABI,
+}
+
 export {
   chains,
   connectors,
-  staking_contract,
+  token_contract,
   nft_contract,
+  staking_contract,
   provider,
   wagmiClient,
 }
