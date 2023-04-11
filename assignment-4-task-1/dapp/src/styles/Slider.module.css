@@ -1,0 +1,25 @@
+.sliderContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 700%;
+  animation: slide 20s linear infinite;
+}
+
+.slide {
+  width: calc(100% / 7);
+  height: 400px;
+  position: relative;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-85%);
+  }
+}

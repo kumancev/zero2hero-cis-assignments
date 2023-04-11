@@ -1,6 +1,6 @@
 .grid {
   display: flex;
-  min-height: 90vh;
+  min-height: 100vh;
   min-width: 100vw;
   align-items: center;
   justify-content: center;

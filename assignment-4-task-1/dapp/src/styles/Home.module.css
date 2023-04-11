@@ -8,7 +8,6 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
   align-items: center;
 }
 
@@ -73,6 +72,11 @@
   color: #ffffff;
 }
 
+.link-wrapper {
+  display: flex;
+  gap: 4rem;
+}
+
 .link {
   margin-top: 2rem;
   color: #ffffff;
@@ -81,6 +85,8 @@
 .link:hover {
   text-decoration: underline;
 }
+
+
 
 @media (max-width: 600px) {
   .main {

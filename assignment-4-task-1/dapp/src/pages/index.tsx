@@ -7,8 +7,9 @@ import { useAccount } from 'wagmi'
 import correctURLs from '../helpers/url'
 import { mintNFT, balanceNFT, urlsNFT } from '../services/nft'
 import { setAllUrls } from '../app/features/urls/urlsSlice'
-import styles from '../styles/Home.module.css'
 import { useAppDispatch } from '../app/hooks'
+import Slider from '../components/Slider'
+import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   const dispatch = useAppDispatch()
@@ -78,9 +79,17 @@ const Home: NextPage = () => {
                 Mint
               </button>
               <p>Your number of nfts: {ownerBalance}</p>
+
+            <div className={styles['link-wrapper']}>
+              <Link href="/myCollection">
+                <p className={styles.link}>Stake NFT&apos;s</p>
+              </Link>
               <Link href="/myCollection">
                 <p className={styles.link}>See my collection</p>
               </Link>
+            </div>
+
+              <Slider />
             </>
           ) : (
             <p className={styles.description}>

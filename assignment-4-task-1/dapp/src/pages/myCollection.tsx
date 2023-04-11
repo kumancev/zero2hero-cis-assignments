@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import getNftData from '../helpers/getNftData'
 import { useAppSelector } from '../app/hooks'
-import styles from '../styles/MyCollection.module.css'
 import NftCard from '../components/NftCard'
 import Link from 'next/link'
+import styles from '../styles/MyCollection.module.css'
 
 const MyCollection = () => {
   const [nftData, setNftData] = useState<any>([])

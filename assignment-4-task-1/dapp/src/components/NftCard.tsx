@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from '../styles/MyCollection.module.css'
 
 interface NftCardProps {
