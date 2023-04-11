@@ -5,6 +5,8 @@ import type { AppProps } from 'next/app'
 import { configureChains, createClient, WagmiConfig } from 'wagmi'
 import { bscTestnet } from 'wagmi/chains'
 import { publicProvider } from 'wagmi/providers/public'
+import { Provider } from 'react-redux'
+import { store } from '../app/store'
 
 const { chains, provider, webSocketProvider } = configureChains(
   [bscTestnet],
@@ -25,11 +27,13 @@ const wagmiClient = createClient({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains}>
-        <Component {...pageProps} />
-      </RainbowKitProvider>
-    </WagmiConfig>
+    <Provider store={store}>
+      <WagmiConfig client={wagmiClient}>
+        <RainbowKitProvider chains={chains}>
+          <Component {...pageProps} />
+        </RainbowKitProvider>
+      </WagmiConfig>
+    </Provider>
   )
 }
 

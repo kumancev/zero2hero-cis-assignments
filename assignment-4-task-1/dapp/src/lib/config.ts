@@ -41,9 +41,7 @@ const staking_contract: Contract = {
 }
 
 const nft_contract: Contract = {
-  address:
-    (process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as `0x${string}`) ??
-    '0xd26DC61248914B9b7E9e1231b89757Eca7470D06',
+  address: '0xd26DC61248914B9b7E9e1231b89757Eca7470D06',
   abi: NFT_ABI,
 }
 
