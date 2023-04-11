@@ -1,3 +1,7 @@
+# NFT Mint and Staking
+
+Site: https://shape-nft.netlify.app
+
 ## Getting Started
 
 First, run the development server:
