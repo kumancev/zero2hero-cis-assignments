@@ -11,7 +11,7 @@ const { chains, provider } = configureChains(
   [
     jsonRpcProvider({
       rpc: () => ({
-        http: process.env.NEXT_PUBLIC_RPC_URL ?? '',
+        http: 'https://data-seed-prebsc-1-s1.binance.org:8545',
       }),
     }),
   ]
