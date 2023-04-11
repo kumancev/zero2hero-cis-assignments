@@ -81,7 +81,7 @@ const Home: NextPage = () => {
               <p>Your number of nfts: {ownerBalance}</p>
 
             <div className={styles['link-wrapper']}>
-              <Link href="/myCollection">
+              <Link href="/stakeNft">
                 <p className={styles.link}>Stake NFT&apos;s</p>
               </Link>
               <Link href="/myCollection">
