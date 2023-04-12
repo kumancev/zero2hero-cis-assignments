@@ -25,5 +25,7 @@
 # Navigate
 
 `blockchain/` - store smart-contracts and tests (ERC20, ERC721, NFT Staking)
+
 `dapp/` - store frontend
+
 `generator/` - store generator images and meta-data for IPFS
