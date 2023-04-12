@@ -100,18 +100,22 @@ const StakeNft: NextPage = () => {
 
             <h2>Your Staked NFT&apos;s</h2>
 
-            <div className={styles.grid}>
-              {stakedData.map((nft: any) => (
-                <NftStakingCard
-                  key={nft.name}
-                  name={nft.name}
-                  description={nft.description}
-                  image={nft.image}
-                  staked={true}
-                  tokenId={nft.name.match(/#(\d+)/)?.[1]}
-                />
-              ))}
-            </div>
+            {stakedData.length > 0 ? (
+              <div className={styles.grid}>
+                {stakedData.map((nft: any) => (
+                  <NftStakingCard
+                    key={nft.name}
+                    name={nft.name}
+                    description={nft.description}
+                    image={nft.image}
+                    staked={true}
+                    tokenId={nft.name.match(/#(\d+)/)?.[1]}
+                  />
+                ))}
+              </div>
+            ) : (
+              <p>You haven&apos;t stake any NFT yet.</p>
+            )}
 
             <h2>Your Unstaked NFT&apos;s</h2>
             <div className={styles.grid}>
