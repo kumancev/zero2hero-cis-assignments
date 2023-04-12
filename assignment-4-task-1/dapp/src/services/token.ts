@@ -1,6 +1,4 @@
-import {
-  readContract,
-} from '@wagmi/core'
+import { readContract } from '@wagmi/core'
 import { token_contract } from '../lib/config'
 
 const balanceToken = async (account: `0x${string}`) => {

@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import getNftData from '../helpers/getNftData'
 import { useAppSelector } from '../app/hooks'
-import NftCard from '../components/NftCard'
+import NftStakingCard from '../components/NftStakingCard'
 import Link from 'next/link'
-import styles from '../styles/MyCollection.module.css'
 import { NextPage } from 'next'
+import styles from '../styles/MyCollection.module.css'
 
 const MyCollection: NextPage = () => {
   const [nftData, setNftData] = useState<any>([])
@@ -25,11 +25,13 @@ const MyCollection: NextPage = () => {
   console.log(nftData)
 
   return (
-    <>
-      <Link href="/">Back to home</Link>
+    <div>
+      <Link href="/">
+        <p className={styles.link}>Back to home</p>
+      </Link>
       <div className={styles.grid}>
         {nftData.map((nft: any) => (
-          <NftCard
+          <NftStakingCard
             key={nft.name}
             name={nft.name}
             description={nft.description}
@@ -37,7 +39,7 @@ const MyCollection: NextPage = () => {
           />
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

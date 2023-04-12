@@ -41,16 +41,26 @@
   width: 100%;
 }
 
-.nft-links {
+.nft-action {
   display: flex;
-  gap: 2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
 }
 
-.nft-links > a {
+.nft-action > button {
   color: #fff;
 }
-.nft-links > a:hover {
-  color: #f0f0f0;
+.nft-action > button:hover {
+  color: #a9f1c1;
+}
+
+.link {
+  padding: 1rem;
+  margin: 0;
+  color: #111;
+  cursor: pointer;
+}
+.link:hover {
   text-decoration: underline;
 }
 

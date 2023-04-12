@@ -62,12 +62,12 @@ const urlsNFT = async (owner: `0x${string}`, balance: number) => {
   return urls
 }
 
-const approveNFT = async (operator: `0x${string}`) => {
+const approveNFT = async (tokenId: number) => {
   const config = await prepareWriteContract({
     address: nft_contract.address,
     abi: nft_contract.abi,
-    functionName: 'setApprovalForAll',
-    args: [operator, true],
+    functionName: 'approve',
+    args: ['0x4e9Ed617d43Ed0a405Dc6defad55d4f77387b122', tokenId],
   })
 
   const { hash } = await writeContract(config)

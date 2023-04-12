@@ -1,5 +1,9 @@
 .page {
-  background: linear-gradient(145deg, hsl(157, 96%, 41%) 0%, hsl(0, 0%, 100%) 100%);
+  background: linear-gradient(
+    145deg,
+    hsl(157, 96%, 41%) 0%,
+    hsl(0, 0%, 100%) 100%
+  );
 }
 
 .page h1 {
@@ -7,11 +11,10 @@
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    min-width: 100vw;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
 }
 
 .wrapper button {
@@ -23,6 +26,10 @@
   color: #fff;
   cursor: pointer;
 }
+.wrapper button:hover {
+  color: #a9f1c1;
+}
+
 
 .main {
   display: flex;
@@ -34,7 +41,7 @@
   display: flex;
   align-items: center;
   gap: 8rem;
-  margin: 0.75rem  0 2rem 0;
+  margin: 0.75rem 0 2rem 0;
 }
 
 .token-item {
@@ -62,6 +69,40 @@
   text-decoration: underline;
 }
 
+.grid {
+  display: flex;
+  gap: 6rem;
+}
+
+.loader {
+  margin-top: 6rem;
+  width: 2.5em;
+  height: 3em;
+  border: 3px solid transparent;
+  border-top-color: #111;
+  border-bottom-color: #111;
+  border-radius: 50%;
+  animation: spin-stretch 2s ease infinite;
+}
+
+@keyframes spin-stretch {
+  50% {
+    transform: rotate(360deg) scale(0.4, 0.33);
+    border-width: 8px;
+  }
+  100% {
+    transform: rotate(720deg) scale(1, 1);
+    border-width: 3px;
+  }
+}
+
+
+
+@media (max-width: 1100px) {
+  .grid {
+    gap: 0;
+  }
+}
 
 @media (max-width: 600px) {
   .page {
@@ -71,11 +112,10 @@
   .wrapper button {
     padding: 8px 22px;
     font-size: medium;
-
   }
 
   .token-info {
-    margin: 0.5rem  0 1.5rem 0;
+    margin: 0.5rem 0 1.5rem 0;
     flex-direction: column;
     gap: 2rem;
   }
@@ -86,5 +126,11 @@
 
   .token-item h4 {
     margin-bottom: 0.2rem;
+  }
+
+  .grid {
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
   }
 }

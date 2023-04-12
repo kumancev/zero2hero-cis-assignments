@@ -48,7 +48,7 @@ const nft_contract: Contract = {
 
 const token_contract: Contract = {
   address: '0xee567f65f0c86406F9f92cEfFFBd7377f3Ca8e43',
-  abi: NFT_ABI,
+  abi: TOKEN_ABI,
 }
 
 export {

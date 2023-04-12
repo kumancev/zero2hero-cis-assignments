@@ -9,6 +9,8 @@ import { mintNFT, balanceNFT, urlsNFT } from '../services/nft'
 import { setAllUrls } from '../app/features/urls/urlsSlice'
 import { useAppDispatch } from '../app/hooks'
 import Slider from '../components/Slider'
+import { stakedTokens } from '../services/stakeNFT'
+import getStakedTokenIds from '../helpers/getTokenIds'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -16,6 +18,7 @@ const Home: NextPage = () => {
   const { address } = useAccount()
 
   const [ownerBalance, setOwnerBalance] = useState(0)
+  const [stakedBalance, setStakedBalance] = useState<any>(0)
 
   const mint = async () => {
     try {
@@ -30,9 +33,11 @@ const Home: NextPage = () => {
       const getNFTs = async () => {
         try {
           const nftBalance = Number(await balanceNFT(address!))
-          if (nftBalance) {
-            setOwnerBalance(nftBalance)
-          }
+          const ids = await stakedTokens(address!)
+          const staked = getStakedTokenIds(ids)
+
+          setOwnerBalance(nftBalance)
+          setStakedBalance(staked.length)
         } catch (error) {
           console.error(error)
         }
@@ -79,17 +84,28 @@ const Home: NextPage = () => {
             <>
               <p className={styles.description}>Get started by mint NFT</p>
               <button onClick={mint} className={styles.button}>
-                Mint
+                mint
               </button>
-              <p>Your number of nfts: {ownerBalance}</p>
+              <p>
+                Your number of nfts: {ownerBalance + stakedBalance}. On staking:{' '}
+                {stakedBalance}
+              </p>
 
               <div className={styles['link-wrapper']}>
                 <Link href="/stakeNft">
                   <p className={styles.link}>Stake NFT&apos;s</p>
                 </Link>
-                <Link href="/myCollection">
-                  <p className={styles.link}>See my collection</p>
-                </Link>
+                {/* <Link href="/myCollection">
+                  <p className={styles.link}>See Collection</p>
+                </Link> */}
+                <a
+                  href="https://testnets.opensea.io/collection/shape-nft-3"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.link}
+                >
+                  See Collection
+                </a>
               </div>
 
               <Slider />
