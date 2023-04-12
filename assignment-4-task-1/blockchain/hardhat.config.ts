@@ -27,6 +27,11 @@ const config: HardhatUserConfig = {
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : []
     }
   },
+  gasReporter: {
+    enabled: true,
+    outputFile: "gasReport.txt",
+    noColors: true,
+  },
   etherscan: {
     apiKey: process.env.BSCSCAN_API_KEY
   },
