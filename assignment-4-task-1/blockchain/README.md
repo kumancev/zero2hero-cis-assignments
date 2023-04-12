@@ -1,17 +1,3 @@
-### ✅ __What's done__:
-- [x] Create NFT collection (ERC721) 5-1000 items
-- [x] Upload metadata to IPFS or on-chain 
-- [x] Write tests in hardhat (at least 3 tests) 
-- [x] Build smart contracts over hardhat
-- [x] Mint the NFT
-- [x] Write about the potential utility of your NFT collection (20-400 words)
-- [x] Upload the project to github, write a Readme (40-600 words)
-
-- [x] __EXTRA__: Cover all functions completely with tests. 
-- [x] __EXTRA__: Create your own NFT collection (not a copy and not fully generated AI)
-- [x] __EXTRA__: Get coverage and gas report from Hardhat
-- [x] __EXTRA__: Create a landing page for your NFT collection
-
 # Run project
 
 This project demonstrates a NFT Mint and Staking use case. It comes with a contracts, a tests for that contract, coverage & gas report data and a script that deploys that contracts.
