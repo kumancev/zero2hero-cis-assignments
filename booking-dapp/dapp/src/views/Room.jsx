@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { FaEthereum } from 'react-icons/fa'
+import { SiBinance } from 'react-icons/si'
 import { CiEdit } from 'react-icons/ci'
 import { FiCalendar } from 'react-icons/fi'
 import { MdDeleteOutline } from 'react-icons/md'
@@ -341,8 +342,9 @@ const RoomCalendar = ({ price }) => {
     >
       <div className="flex justify-between">
         <div className="flex justify-center items-center">
-          <FaEthereum className="text-lg text-gray-500" />
-          <span className="text-lg text-gray-500">
+        <SiBinance className="text-lg text-yellow-500" />
+          {/* <FaEthereum className="text-lg text-gray-500" /> */}
+          <span className="text-lg text-gray-500 pl-1">
             {price} <small>per night</small>
           </span>
         </div>
@@ -371,14 +373,14 @@ const RoomCalendar = ({ price }) => {
         className="rounded-lg w-full"
       />
       <button
-        className="p-2 border-none bg-gradient-to-l from-pink-600
+        className="p-2 border-none bg-gradient-to-l from-blue-600
         to-gray-600 text-white w-full rounded-md focus:outline-none
         focus:ring-0"
       >
         Book
       </button>
 
-      <Link to={`/bookings/${id}`} className="text-pink-500">
+      <Link to={`/bookings/${id}`} className="text-blue-500">
         Check your bookings
       </Link>
     </form>

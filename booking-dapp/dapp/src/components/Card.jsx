@@ -1,5 +1,6 @@
 import React from 'react'
-import { FaStar, FaEthereum } from 'react-icons/fa'
+import { SiBinance } from 'react-icons/si'
+import { FaStar } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import ImageSlider from './ImageSlider'
 
@@ -22,7 +23,7 @@ const Card = ({ appartment }) => {
         <div className="flex justify-between items-center text-sm">
           <p className="text-gray-700">{appartment.timestamp}</p>
           <b className="flex justify-start items-center space-x-1 font-semibold">
-            <FaEthereum />
+            <SiBinance color="#FFC200" size={16} />
             <span>
               {appartment.price} night {appartment.deleted}
             </span>

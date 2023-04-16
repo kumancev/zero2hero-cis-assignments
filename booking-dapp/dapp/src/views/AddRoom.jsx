@@ -102,7 +102,7 @@ const AddRoom = () => {
               step={0.01}
               min={0.01}
               name="price"
-              placeholder="price (Eth)"
+              placeholder="price (BNB)"
               onChange={(e) => setPrice(e.target.value)}
               value={price}
               required
