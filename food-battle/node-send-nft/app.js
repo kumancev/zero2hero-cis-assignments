@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const { ethers } = require('ethers')
 const abi = require('./abi')
@@ -10,14 +11,10 @@ const wallet = new ethers.Wallet(privateKey, provider)
 const contractAddress = '0x951965D80B10ED2181A994E379aCB4f1DC96f340'
 const contract = new ethers.Contract(contractAddress, abi, wallet)
 
-app.use(express.json())
 
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*')
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
-  next()
-})
+app.use(express.json())
+app.use(cors())
+
 
 // Middleware for checking the access token
 const requireToken = (req, res, next) => {
@@ -46,5 +43,5 @@ app.post('/send', requireToken, async (req, res) => {
 })
 
 app.listen(5454, () => {
-  console.log('Server listening on port 3000')
+  console.log('Server listening on port 5454')
 })
