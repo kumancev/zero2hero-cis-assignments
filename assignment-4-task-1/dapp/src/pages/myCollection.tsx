@@ -11,8 +11,6 @@ const MyCollection: NextPage = () => {
 
   const urls = useAppSelector((state) => state.urls.urls)
 
-  console.log(urls)
-
   useEffect(() => {
     const getData = async () => {
       const data = await getNftData(urls)
@@ -21,8 +19,6 @@ const MyCollection: NextPage = () => {
 
     getData()
   }, [urls])
-
-  console.log(nftData)
 
   return (
     <div>

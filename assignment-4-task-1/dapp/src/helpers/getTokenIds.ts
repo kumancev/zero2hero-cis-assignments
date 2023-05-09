@@ -1,4 +1,4 @@
-const getStakedTokenIds = (data: any) => {
+const getStakedTokenIds = (data: any): Array<number> => {
   let tokenIds = []
 
   for (let i = 0; i < data.length; i++) {

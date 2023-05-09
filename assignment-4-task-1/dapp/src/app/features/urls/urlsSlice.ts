@@ -4,7 +4,7 @@ import {
 } from '@reduxjs/toolkit'
 
 interface UrlsState {
-  urls: Array<any>
+  urls: Array<string | undefined>
 }
 
 const initialState: UrlsState = {
@@ -15,7 +15,7 @@ export const urlsSlice = createSlice({
   name: 'urls',
   initialState,
   reducers: {
-    setAllUrls: (state, action: PayloadAction<Array<any>>) => {
+    setAllUrls: (state, action: PayloadAction<Array<string | undefined>>) => {
       state.urls = action.payload
     },
   },

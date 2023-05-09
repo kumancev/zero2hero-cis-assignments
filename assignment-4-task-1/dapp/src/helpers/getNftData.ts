@@ -10,11 +10,6 @@ const getNftData = async (urls: any) => {
           Accept: 'application/json',
         },
       })
-
-      console.log(JSON.stringify(data, null, 4))
-
-      console.log('response status is: ', status)
-
       nftData.push(data)
     } catch (error) {
       if (axios.isAxiosError(error)) {
