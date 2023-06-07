@@ -11,10 +11,10 @@ async function main() {
 
   console.log('NFT deployed to:', token.address)
 
-  await run('verify:verify', {
-    address: token.address,
-    contract: 'contracts/NFT.sol:FoodBattle'
-  })
+  // await run('verify:verify', {
+  //   address: token.address,
+  //   contract: 'contracts/NFT.sol:FoodBattle'
+  // })
 }
 
 main().catch((error) => {

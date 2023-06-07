@@ -5,10 +5,10 @@ const { ethers } = require('ethers')
 const abi = require('./abi')
 require('dotenv').config()
 
-const provider = new ethers.providers.JsonRpcProvider('https://data-seed-prebsc-1-s3.binance.org:8545')
+const provider = new ethers.providers.JsonRpcProvider('https://rpc.testnet.mantle.xyz')
 const privateKey = process.env.PRIVATE_KEY
 const wallet = new ethers.Wallet(privateKey, provider)
-const contractAddress = '0x951965D80B10ED2181A994E379aCB4f1DC96f340'
+const contractAddress = '0xAC94Ea492D58A03BD63a83a1e7A36fDEa464d8fD'
 const contract = new ethers.Contract(contractAddress, abi, wallet)
 
 
